@@ -1,61 +1,64 @@
 package task.stream;
 
+import java.util.List;
+import java.util.Optional;
+import java.util.OptionalDouble;
+
 public class Stream {
-    public static void main(String[] args) {
 
-    }
+  public static int addNumbers(int num1, int num2) {
+    return 0;
+  }
 
-    //Реализуйте функциональность согласно описанию
+  public static List<String> filterWordsByLetter(List<String> words, char letter) {
+    return null;
+  }
 
-// TODO: Напишите метод, который принимает два числа от пользователя и использует функциональный интерфейс BinaryOperator
-//  для сложения этих чисел и вывода результата. Используйте для решения лямбда выражение
+  public static List<Integer> squareNumbers(List<Integer> numbers) {
+    return null;
+  }
 
+  public static void printUpperCase(List<String> words) {
+  }
 
-// TODO: Напишите метод, который принимает список слов от пользователя и использует функциональный интерфейс Predicate
-//  для фильтрации слов, начинающихся с определенной буквы, и вывода отфильтрованного списка.Используйте для решения лямбда выражение
+  public static int sumOfNumbers(List<Integer> numbers) {
+    return 0;
+  }
 
+  public static OptionalDouble averageOfNumbers(List<Integer> numbers) {
+    return null;
+  }
 
-// TODO: Напишите метод, который принимает список чисел от пользователя и использует функциональный интерфейс Function
-//  для преобразования каждого числа в его квадрат и вывода списка квадратов.Используйте для решения лямбда выражение
+  public static Optional<Integer> findMaxNumber(List<Integer> numbers) {
+    return null;
+  }
 
+  public static Optional<Integer> findMinNumber(List<Integer> numbers) {
+    return null;
+  }
 
-// TODO: Напишите метод, который принимает список строк от пользователя и использует функциональный интерфейс Consumer
-//  для вывода каждой строки в верхнем регистре.Используйте для решения лямбда выражение
+  public static boolean containsValue(List<Integer> numbers, int value) {
+    return false;
+  }
 
+  public static List<Integer> removeDuplicates(List<Integer> numbers) {
+    return null;
+  }
 
-// TODO: Найти сумму всех чисел в списке. Описание: Напишите программу, которая принимает список целых чисел в качестве
-//  входных данных и вычисляет их сумму с использованием стримов.
+  public static List<Integer> stringLengths(List<String> words) {
+    return null;
+  }
 
+  public static String concatenateStrings(List<String> words) {
+    return null;
+  }
 
-// TODO: Найти среднее значение всех чисел в списке. Описание: Напишите программу, которая принимает список чисел в качестве
-//  входных данных и вычисляет их среднее значение с использованием стримов.
+  public static List<Integer> filterEvenNumbers(List<Integer> numbers) {
+    return null;
+  }
 
+  public static Optional<Integer> findFirstEvenNumber(List<Integer> numbers) {
+    return null;
+  }
 
-// TODO: Найти наибольшее число в списке. Описание: Напишите программу, которая принимает список чисел в качестве входных
-//  данных и находит наибольшее число с использованием стримов.
-
-
-// TODO: Найти наименьшее число в списке. Описание: Напишите программу, которая принимает список чисел в качестве входных
-//  данных и находит наименьшее число с использованием стримов.
-
-
-// TODO: Проверить, содержит ли список определенное значение. Описание: Напишите программу, которая принимает список
-//  элементов и определенное значение в качестве входных данных и проверяет, содержит ли список это значение с использованием
-//  стримов.
-
-
-// TODO: Удалить дубликаты из списка. Описание: Напишите программу, которая принимает список элементов в качестве входных
-//  данных и удаляет все дубликаты, оставляя только уникальные элементы с использованием стримов.
-
-
-// TODO: Преобразовать список строк в список их длин. Описание: Напишите программу, которая принимает список строк в
-//  качестве входных данных и преобразует его в список их длин с использованием стримов.
-
-
-// TODO: Соединить все строки из списка в одну строку. Описание: Напишите программу, которая принимает список строк в
-//  качестве входных данных и соединяет их все в одну строку с использованием стримов.
-
-
-// TODO: Отфильтровать список чисел, оставив только четные числа. Описание: Напишите программу, которая принимает список
-//  чисел в качестве входных данных и фильтрует его, оставляя только четные числа с использованием стримов.
 }

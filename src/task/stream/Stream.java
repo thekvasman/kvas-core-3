@@ -3,62 +3,97 @@ package task.stream;
 import java.util.List;
 import java.util.Optional;
 import java.util.OptionalDouble;
+import java.util.function.BinaryOperator;
+import java.util.stream.Collectors;
 
 public class Stream {
+    //1
+    public static int addNumbers(int num1, int num2) {
+        BinaryOperator<Integer> sum = Integer::sum;
+        return sum.apply(num1, num2);
+    }
 
-  public static int addNumbers(int num1, int num2) {
-    return 0;
-  }
+    //2
+    public static List<String> filterWordsByLetter(List<String> words, char letter) {
+        return words.stream()
+                .filter(v -> v.startsWith(String.valueOf(letter)))
+                .toList();
+    }
 
-  public static List<String> filterWordsByLetter(List<String> words, char letter) {
-    return null;
-  }
+    //3
+    public static List<Integer> squareNumbers(List<Integer> numbers) {
+        return numbers.stream()
+                .map(v -> v * v)
+                .toList();
+    }
 
-  public static List<Integer> squareNumbers(List<Integer> numbers) {
-    return null;
-  }
+    //4
+    public static void printUpperCase(List<String> words) {
+        words.forEach(s -> s.toUpperCase());
+    }
 
-  public static void printUpperCase(List<String> words) {
-  }
+    //5
+    public static int sumOfNumbers(List<Integer> numbers) {
+        return numbers.stream().mapToInt(v -> v).sum();
+    }
 
-  public static int sumOfNumbers(List<Integer> numbers) {
-    return 0;
-  }
+    //6
+    public static OptionalDouble averageOfNumbers(List<Integer> numbers) {
+        return numbers.stream()
+                .mapToInt(v -> v)
+                .average();
+    }
 
-  public static OptionalDouble averageOfNumbers(List<Integer> numbers) {
-    return null;
-  }
+    //7
+    public static Optional<Integer> findMaxNumber(List<Integer> numbers) {
+        return numbers.stream()
+                .max(Integer::compare);
+    }
 
-  public static Optional<Integer> findMaxNumber(List<Integer> numbers) {
-    return null;
-  }
+    //8
+    public static Optional<Integer> findMinNumber(List<Integer> numbers) {
+        return numbers.stream()
+                .min(Integer::compare);
+    }
 
-  public static Optional<Integer> findMinNumber(List<Integer> numbers) {
-    return null;
-  }
+    //9
+    public static boolean containsValue(List<Integer> numbers, int value) {
+        return numbers.stream()
+                .anyMatch(v -> v == value);
+    }
 
-  public static boolean containsValue(List<Integer> numbers, int value) {
-    return false;
-  }
+    //10
+    public static List<Integer> removeDuplicates(List<Integer> numbers) {
+        return numbers.stream()
+                .distinct()
+                .toList();
+    }
 
-  public static List<Integer> removeDuplicates(List<Integer> numbers) {
-    return null;
-  }
+    //11
+    public static List<Integer> stringLengths(List<String> words) {
+        return words.stream()
+                .map(String::length)
+                .toList();
+    }
 
-  public static List<Integer> stringLengths(List<String> words) {
-    return null;
-  }
+    //12
+    public static String concatenateStrings(List<String> words) {
+        return words.stream()
+                .collect(Collectors.joining(" "));
+    }
 
-  public static String concatenateStrings(List<String> words) {
-    return null;
-  }
+    //13
+    public static List<Integer> filterEvenNumbers(List<Integer> numbers) {
+        return numbers.stream()
+                .filter(v -> v % 2 == 0)
+                .toList();
+    }
 
-  public static List<Integer> filterEvenNumbers(List<Integer> numbers) {
-    return null;
-  }
-
-  public static Optional<Integer> findFirstEvenNumber(List<Integer> numbers) {
-    return null;
-  }
+    //14
+    public static Optional<Integer> findFirstEvenNumber(List<Integer> numbers) {
+        return numbers.stream()
+                .filter(v -> v % 2 ==0)
+                .findFirst();
+    }
 
 }
